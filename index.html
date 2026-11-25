@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>STAR CATCHER</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="arcade-frame">
+    <header class="game-header">
+      <div class="title-row">
+        <span class="title-star" aria-hidden="true">★</span>
+        <h1>STAR CATCHER</h1>
+      </div>
+      <p class="subtitle">Catch the stars and beat your record!</p>
+    </header>
+
+    <section class="stats-grid" aria-label="Game status">
+      <div class="stat-box">
+        <span class="stat-label">SCORE</span>
+        <span id="score" class="stat-value">0</span>
+      </div>
+      <div class="stat-box">
+        <span class="stat-label">TIME</span>
+        <span id="time" class="stat-value">30</span>
+      </div>
+      <div class="stat-box">
+        <span class="stat-label">BEST</span>
+        <span id="best" class="stat-value">0</span>
+      </div>
+    </section>
+
+    <section class="arena-wrapper">
+      <div id="arena" class="arena" role="application" aria-label="Star Catcher Arena">
+        <div id="startOverlay" class="arena-overlay">
+          <p class="overlay-text">Tap or click the glowing stars before time runs out!</p>
+          <button id="startButton" type="button" class="action-btn">START GAME</button>
+        </div>
+      </div>
+    </section>
+
+    <div class="controls-area">
+      <button id="actionBtn" type="button" class="action-btn playing-state" disabled>
+        PLAYING...
+      </button>
+      <p id="statusFeedback" class="status-feedback">Ayo tangkap bintangnya!</p>
+      <p id="newHighBanner" class="high-score-banner hidden">
+        NEW HIGH SCORE! 🏆 <span id="highScoreValue">0</span>
+      </p>
+    </div>
+
+    <footer class="arcade-footer">
+      NEON ARCADE EXPERIENCE © 2026
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
